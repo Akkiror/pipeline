@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'maven' } }
+    agent { docker { image 'tomcat' } }
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'tomcat --version'
             }
         }
     }
